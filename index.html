@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus | Modern Fintech Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .card-gradient { background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); }
+    </style>
+</head>
+<body class="min-h-screen flex">
+
+    <aside class="w-64 border-r border-slate-800 p-6 flex flex-col hidden md:flex">
+        <div class="flex items-center gap-2 mb-10">
+            <div class="p-2 bg-indigo-600 rounded-lg">
+                <i data-lucide="layers" class="text-white w-6 h-6"></i>
+            </div>
+            <span class="text-xl font-bold tracking-tight">NEXUS</span>
+        </div>
+        
+        <nav class="space-y-4 flex-1">
+            <a href="#" class="flex items-center gap-3 text-indigo-400 bg-indigo-400/10 p-3 rounded-xl transition">
+                <i data-lucide="layout-dashboard"></i> Dashboard
+            </a>
+            <a href="#" class="flex items-center gap-3 text-slate-400 hover:text-white p-3 transition">
+                <i data-lucide="arrow-right-left"></i> Transactions
+            </a>
+            <a href="#" class="flex items-center gap-3 text-slate-400 hover:text-white p-3 transition">
+                <i data-lucide="pie-chart"></i> Analytics
+            </a>
+            <a href="#" class="flex items-center gap-3 text-slate-400 hover:text-white p-3 transition">
+                <i data-lucide="credit-card"></i> Cards
+            </a>
+        </nav>
+
+        <div class="mt-auto glass p-4 rounded-2xl">
+            <p class="text-xs text-slate-400 mb-2">PRO PLAN</p>
+            <p class="text-sm font-medium mb-3">Upgrade for 0% fees</p>
+            <button class="w-full py-2 bg-white text-slate-900 text-xs font-bold rounded-lg hover:bg-slate-200 transition">Go Pro</button>
+        </div>
+    </aside>
+
+    <main class="flex-1 p-4 md:p-10 overflow-y-auto">
+        
+        <header class="flex justify-between items-center mb-10">
+            <div>
+                <h1 class="text-2xl font-bold">Welcome back, Alex</h1>
+                <p class="text-slate-400 text-sm">Here's what's happening with your money today.</p>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="p-2 glass rounded-full hover:bg-slate-700 transition">
+                    <i data-lucide="search" class="w-5 h-5 text-slate-400"></i>
+                </button>
+                <button class="p-2 glass rounded-full hover:bg-slate-700 transition relative">
+                    <i data-lucide="bell" class="w-5 h-5 text-slate-400"></i>
+                    <span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full"></span>
+                </button>
+                <div class="w-10 h-10 rounded-full bg-indigo-500 border-2 border-indigo-300"></div>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
+            <div class="lg:col-span-2 card-gradient rounded-3xl p-8 relative overflow-hidden shadow-2xl shadow-indigo-500/20">
+                <div class="relative z-10">
+                    <p class="text-indigo-100 text-sm mb-1">Total Balance</p>
+                    <h2 class="text-4xl font-bold mb-8">$42,590.20</h2>
+                    <div class="flex gap-10">
+                        <div>
+                            <p class="text-indigo-200 text-xs uppercase tracking-widest mb-1">Income</p>
+                            <p class="font-semibold">+$5,240.00</p>
+                        </div>
+                        <div>
+                            <p class="text-indigo-200 text-xs uppercase tracking-widest mb-1">Expenses</p>
+                            <p class="font-semibold">-$2,120.50</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+            </div>
+
+            <div class="glass rounded-3xl p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="font-bold">Savings Goal</h3>
+                    <i data-lucide="target" class="text-indigo-400 w-5 h-5"></i>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex justify-between text-sm">
+                        <span class="text-slate-400">New MacBook Pro</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="w-full bg-slate-700 h-2 rounded-full overflow-hidden">
+                        <div class="bg-indigo-500 h-full w-3/4"></div>
+                    </div>
+                    <p class="text-xs text-slate-400">You need $1,200 more to reach your goal.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div class="lg:col-span-2 glass rounded-3xl p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-lg font-bold">Recent Transactions</h3>
+                    <button class="text-indigo-400 text-sm font-medium hover:underline">View All</button>
+                </div>
+                <div class="space-y-6">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-slate-800 rounded-2xl flex items-center justify-center">
+                                <i data-lucide="shopping-bag" class="text-pink-500"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Apple Store</p>
+                                <p class="text-xs text-slate-500">Technology • 2 hours ago</p>
+                            </div>
+                        </div>
+                        <span class="font-bold text-red-400">-$199.00</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-slate-800 rounded-2xl flex items-center justify-center">
+                                <i data-lucide="coffee" class="text-orange-400"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Starbucks</p>
+                                <p class="text-xs text-slate-500">Food & Drink • Yesterday</p>
+                            </div>
+                        </div>
+                        <span class="font-bold text-red-400">-$12.50</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-slate-800 rounded-2xl flex items-center justify-center">
+                                <i data-lucide="arrow-down-left" class="text-emerald-400"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Salary Deposit</p>
+                                <p class="text-xs text-slate-500">Income • 2 days ago</p>
+                            </div>
+                        </div>
+                        <span class="font-bold text-emerald-400">+$4,500.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass rounded-3xl p-6">
+                <h3 class="text-lg font-bold mb-6">Quick Transfer</h3>
+                <div class="flex gap-4 mb-8 overflow-x-auto pb-2">
+                    <div class="flex-shrink-0 text-center">
+                        <div class="w-14 h-14 rounded-full border-2 border-dashed border-slate-600 flex items-center justify-center mb-2 cursor-pointer hover:border-indigo-500 transition">
+                            <i data-lucide="plus" class="text-slate-500"></i>
+                        </div>
+                        <span class="text-xs text-slate-400">Add</span>
+                    </div>
+                    <div class="flex-shrink-0 text-center">
+                        <img src="https://i.pravatar.cc/150?u=1" class="w-14 h-14 rounded-full mb-2" alt="Contact">
+                        <span class="text-xs text-slate-400">Sarah</span>
+                    </div>
+                    <div class="flex-shrink-0 text-center">
+                        <img src="https://i.pravatar.cc/150?u=2" class="w-14 h-14 rounded-full mb-2" alt="Contact">
+                        <span class="text-xs text-slate-400">Mike</span>
+                    </div>
+                    <div class="flex-shrink-0 text-center">
+                        <img src="https://i.pravatar.cc/150?u=3" class="w-14 h-14 rounded-full mb-2" alt="Contact">
+                        <span class="text-xs text-slate-400">Lana</span>
+                    </div>
+                </div>
+                <div class="relative mb-4">
+                    <input type="number" placeholder="Enter amount" class="w-full bg-slate-800/50 border border-slate-700 rounded-xl py-3 px-4 outline-none focus:border-indigo-500 transition">
+                    <span class="absolute right-4 top-3 text-slate-500">USD</span>
+                </div>
+                <button class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl transition flex items-center justify-center gap-2">
+                    Send Money <i data-lucide="send" class="w-4 h-4"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
